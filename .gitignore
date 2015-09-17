@@ -1,0 +1,4 @@
+# -------------------------- python specifics
+*.pyc
+*.pyo
+__pycache__
