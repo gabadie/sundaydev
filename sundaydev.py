@@ -134,3 +134,28 @@ def traceback_and_die(**kwargs):
     print traceback(**kwargs)
 
     sys.exit(1)
+
+def caller_file(parent_depth=0):
+    """ Returns a parent frame's file path
+    """
+    # pylint: disable=W0212
+    return sys._getframe(parent_depth + 1).f_code.co_filename
+
+def caller_line(parent_depth=0):
+    """ Returns a parent frame's line in path
+    """
+    # pylint: disable=W0212
+    return sys._getframe(parent_depth + 1).f_lineno
+
+def caller_function_name(parent_depth=0):
+    """ Returns a parent frame's function name
+    """
+    # pylint: disable=W0212
+    return sys._getframe(parent_depth + 1).f_code.co_name
+
+def caller_location(parent_depth=0):
+    """ Returns a file location (<file>:<line>)
+    """
+    # pylint: disable=W0212
+    frame = sys._getframe(parent_depth + 1)
+    return '{}:{}'.format(frame.f_code.co_filename, frame.f_lineno)

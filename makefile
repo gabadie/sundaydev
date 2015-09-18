@@ -6,6 +6,8 @@ PYTHON_TEST_FILES=$(wildcard *_test.py)
 PYTHON_SRC_FILES=$(filter-out $(PYTHON_TEST_FILES),$(PYTHON_FILES))
 CMD_PREFIX=
 
+PYLINT_PARAMS=--msg-template='{msg_id} ({path}:{line}): {msg}'
+
 
 # --------------------------------------------------------------------- COMMANDS
 
@@ -22,4 +24,4 @@ $(PYTHON_TEST_FILES): %.py:
 
 .PHONY: $(PYTHON_SRC_FILES)
 $(PYTHON_SRC_FILES): %.py:
-	$(CMD_PREFIX)pylint -r n $@
+	$(CMD_PREFIX)pylint -r n $(PYLINT_PARAMS) $@

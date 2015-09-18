@@ -5,6 +5,9 @@
 
 # ---------------------------------------------------------------------- IMPORTS
 
+# standard imports
+import os
+
 # local imports
 import sundaydev
 
@@ -41,3 +44,16 @@ def test_traceback_whole_frame():
     traceback_util_test(
             whole_frame=True
         )
+
+def test_file():
+    assert os.path.abspath(sundaydev.caller_file()) == os.path.abspath(__file__)
+
+def test_line():
+    assert sundaydev.caller_line() == 52
+
+def test_function_name():
+    assert sundaydev.caller_function_name() == 'test_function_name'
+
+def test_file_location():
+    sundaydev.caller_location()
+    assert True
