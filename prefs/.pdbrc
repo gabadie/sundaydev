@@ -1,0 +1,15 @@
+# Enable tab completion
+import rlcompleter
+import pdb
+pdb.Pdb.complete = rlcompleter.Completer(locals()).complete
+
+# Next and list, and step and list.
+alias nl n;;l
+alias sl s;;l
+alias rl r;;l
+alias ll u;;d;;l
+alias ul u;;l
+alias dl d;;l
+
+bt
+l
