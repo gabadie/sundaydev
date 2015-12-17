@@ -1,0 +1,42 @@
+# Uses:
+#
+#  [include]
+#     path = /path/to/sundaydev/prefs/gitconfig
+
+[color]
+  ui = auto
+
+[grep]
+  lineNumber = true
+
+[push]
+	default = simple
+
+[http]
+	sslVerify = false
+	postBuffer = 524288000
+
+[alias]
+  a = add
+  ap = add --patch
+  br = branch
+  c = commit
+  ca = commit --amend
+  caa = commit -a --amend
+  ck = checkout
+  cm = commit -m
+  d = diff
+  dc = diff --cached
+  diffc = diff --cached
+  lg = log --color --graph --date-order --pretty=format:'%Cred%H%Creset %C(blue)%ad%Creset %C(cyan)%ae%Creset  %s%Cgreen%d%Creset' --abbrev-commit
+  lga = log --color --graph --date-order --pretty=format:'%Cred%H%Creset %C(blue)%ad%Creset %C(cyan)%ae%Creset  %s%Cgreen%d%Creset' --abbrev-commit --all
+  lgo = log --color --pretty=format:'* %Cred%H%Creset %C(blue)%ad%Creset %C(cyan)%ae%Creset  %s%Cgreen%d%Creset' --abbrev-commit
+  lgs = log -p -S
+  ls = !git ls-files | grep
+  rc = rebase --continue
+  re = rebase
+  ri = rebase -i
+  rk = rebase --abort
+  showf = diff-tree --no-commit-id --name-only -r
+  st = status
+  sth = stash
