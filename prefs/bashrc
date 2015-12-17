@@ -1,0 +1,9 @@
+# Uses in ~/.bashrc:
+#
+#  source /path/to/sundaydev/prefs/bashrc
+
+# Sets up prompt.
+PS1='\[\e[1;32m\][\u \w]>\[\e[0m\] '
+
+# Clear terminal command
+alias cls="echo -ne '\033c'"
