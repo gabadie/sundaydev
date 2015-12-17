@@ -2,6 +2,11 @@
 #
 #  source /path/to/sundaydev/prefs/bashrc
 
+SUNDAYDEV_PATH=$(realpath $(dirname $BASH_SOURCE)/../)
+
+# Adds ../cmds directory to PATH
+export PATH=$PATH:$SUNDAYDEV_PATH/cmds
+
 # Sets up prompt.
 PS1='\[\e[1;32m\][\u \w]>\[\e[0m\] '
 
