@@ -18,6 +18,7 @@
 
 [alias]
   a = add
+  aa = add --all
   ap = add --patch
   br = branch
   c = commit
