@@ -10,11 +10,11 @@
   lineNumber = true
 
 [push]
-	default = simple
+  default = simple
 
 [http]
-	sslVerify = false
-	postBuffer = 524288000
+  sslVerify = false
+  postBuffer = 524288000
 
 [alias]
   a = add
@@ -44,3 +44,4 @@
   showf = diff-tree --no-commit-id --name-only -r
   st = status
   sth = stash
+  unblob = !git show `git fsck --unreachable | awk '{print $3}'`
