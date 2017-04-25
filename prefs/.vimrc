@@ -177,6 +177,10 @@ nmap <silent> <Leader>l <C-W><C-L>
 nmap <silent> <Leader>j :bprev<cr>
 nmap <silent> <Leader>k :bnext<cr>
 
+" Toggle comment using /.
+nmap <silent> <Leader>/ <Leader>c<Space>
+vmap <silent> <Leader>/ <Leader>c<Space><cr>gv
+
 " --------------------------------------- CtrlP
 let g:ctrlp_map='<c-p>'
 let g:ctrlp_cmd='CtrlP'
